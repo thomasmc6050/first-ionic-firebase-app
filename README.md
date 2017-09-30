@@ -1,7 +1,11 @@
-## Event Manager Tutorial
+## My Event Manager
 
-This is the event manager app built for the Ionic and Firebase Crash Course tutorial.
+This is the companion source code for the Event Manager guide, all you need to do is navigate to the folder where you have this downloaded and run `npm install`.
 
-You can find the complete tutorial here:
+For example, if it's in the development folder, you'll do this:
 
-[TUTORIAL](https://javebratt.com/firebase-free-course)
+```bash
+$ cd development
+$ npm install
+$ ionic serve
+```
