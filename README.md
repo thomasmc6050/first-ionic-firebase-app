@@ -9,3 +9,5 @@ $ cd development
 $ npm install
 $ ionic serve
 ```
+
+This is the source code for the `My Event Manager` app that we showcase in the [FREE Ionic and Firebase course](https://javebratt.com/firebase-free-course)
