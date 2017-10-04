@@ -5,11 +5,11 @@ import firebase from 'firebase';
 export class AuthProvider {
   constructor() {}
 
-  loginUser(email: string, password: string): firebase.Promise<any> {
+  loginUser(email: string, password: string): Promise<any> {
     return firebase.auth().signInWithEmailAndPassword(email, password);
   }
 
-  signupUser(email: string, password: string): firebase.Promise<any> {
+  signupUser(email: string, password: string): Promise<any> {
     return firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
@@ -22,11 +22,11 @@ export class AuthProvider {
       .catch(error => console.error(error));
   }
 
-  resetPassword(email: string): firebase.Promise<void> {
+  resetPassword(email: string): Promise<void> {
     return firebase.auth().sendPasswordResetEmail(email);
   }
 
-  logoutUser(): firebase.Promise<void> {
+  logoutUser(): Promise<void> {
     const userId: string = firebase.auth().currentUser.uid;
     firebase
       .database()

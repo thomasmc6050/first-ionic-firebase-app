@@ -28,7 +28,7 @@ export class EventProvider {
     eventDate: string,
     eventPrice: number,
     eventCost: number
-  ): firebase.Promise<any> {
+  ): firebase.database.ThenableReference {
     return this.eventListRef.push({
       name: eventName,
       date: eventDate,
@@ -43,7 +43,7 @@ export class EventProvider {
     eventId: string,
     eventPrice: number,
     guestPicture: string = null
-  ): firebase.Promise<any> {
+  ): PromiseLike<any> {
     return this.eventListRef
       .child(`${eventId}/guestList`)
       .push({ guestName })

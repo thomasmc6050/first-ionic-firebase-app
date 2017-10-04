@@ -23,11 +23,11 @@ export class ProfileProvider {
     return this.userProfile.update({ firstName, lastName });
   }
 
-  updateDOB(birthDate: string): firebase.Promise<any> {
+  updateDOB(birthDate: string): Promise<any> {
     return this.userProfile.update({ birthDate });
   }
 
-  updateEmail(newEmail: string, password: string): firebase.Promise<any> {
+  updateEmail(newEmail: string, password: string): Promise<any> {
     const credential = firebase.auth.EmailAuthProvider.credential(
       this.currentUser.email,
       password
@@ -47,7 +47,7 @@ export class ProfileProvider {
   updatePassword(
     newPassword: string,
     oldPassword: string
-  ): firebase.Promise<any> {
+  ): Promise<any> {
     const credential = firebase.auth.EmailAuthProvider.credential(
       this.currentUser.email,
       oldPassword
